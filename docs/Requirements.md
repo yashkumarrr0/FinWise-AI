@@ -51,3 +51,16 @@
 ### If the user has no money left after expenses and EMI
 - Tell the user to reduce expenses and shows the negative savings
 - The user first have to reduce the loss to start savings
+
+## E. Expense Tracking Rules
+
+### Monthly expense estimate
+- Used as an initial estimate during profile setup.
+
+### Actual transactions
+- Used to calculate the user's real spending.
+
+### How to prevent double counting
+- Keep the estimate separate from actual transactions.
+- Once transactions are added, calculate actual spending from those transactions only.
+- Never add the estimate to the transaction total.
