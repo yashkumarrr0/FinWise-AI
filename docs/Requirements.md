@@ -64,3 +64,24 @@
 - Keep the estimate separate from actual transactions.
 - Once transactions are added, calculate actual spending from those transactions only.
 - Never add the estimate to the transaction total.
+
+## F. Database Design
+
+### Collections
+- users: stores user account information
+- transactions: stores individual transactions
+- goals: stores each user's financial goals
+- loans: stores loan and EMI information
+
+### Rules
+- Each user has a unique user ID.
+- Each transaction belongs to one user.
+- Each transaction is stored as a separate document.
+- Goals and loans are linked to the user ID.
+
+## G. EMI Handling
+
+- Ask whether EMI is already included in monthly expenses.
+- If included, do not subtract it again.
+- If separate, subtract EMI from available balance.
+- Allow users to update their EMI information.
